@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Requests;
+
+class ChooseGiftRequest extends Request
+{
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules(): array
+    {
+        return [
+            'code' => 'string',
+        ];
+    }
+
+    public function getCode(): string
+    {
+        $code = $this->get('code');
+        if ($code === null) {
+            return $this->route('code');
+        }
+
+        return $code;
+    }
+}

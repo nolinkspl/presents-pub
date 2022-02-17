@@ -1,0 +1,544 @@
+@font-face {
+  font-family: "bookantiqua";
+  src: url("fonts/bookantiquabold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "bebasneuebold";
+  src: url("fonts/bebasneuebold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+body {
+  background: #FEC381;
+}
+
+.inner-page {
+  background: url("../img/room-bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.logo {
+  position: absolute;
+  display: flex;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 52px;
+  width: 130px;
+  background: url("../img/logo.png") no-repeat center;
+  background-size: contain;
+  z-index: 100;
+}
+
+.xtree {
+  position: absolute;
+  width: 521px;
+  height: 900px;
+  bottom: 0;
+  left: 10%;
+  background: url("../img/xtree.png") no-repeat left bottom;
+  background-size: contain;
+}
+.xtree:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 42px;
+  left: 14px;
+  height: 750px;
+  width: 440px;
+  background: url("../img/garland.png") no-repeat center;
+  background-size: contain;
+  animation: 2s linear 1s infinite alternate garland;
+}
+
+.santa {
+  font-family: "bookantiqua", sans-serif;
+  font-style: italic;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  border: 15px solid #fff;
+  border-radius: 50px;
+  padding: 30px;
+  color: #fff;
+  background: #00947f;
+  text-align: right;
+  padding-left: 200px;
+  transition: all 0.3s ease;
+  bottom: -200%;
+}
+.santa.sactive {
+  bottom: 30px;
+}
+.santa-thanks {
+  bottom: 30px;
+}
+.santa:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  left: -200px;
+  height: 400px;
+  width: 500px;
+  background: url("../img/santa.png") no-repeat center;
+  background-size: contain;
+}
+.santa-header {
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+.santa-text {
+  font-size: 30px;
+  line-height: 38px;
+  max-width: 455px;
+}
+
+.line {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  background: url("../img/line.png") no-repeat center;
+  background-size: contain;
+  z-index: 5;
+}
+.line-sock {
+  position: absolute;
+  height: 172px;
+  width: 80px;
+  background: url("../img/sock.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.line-sock:hover {
+  filter: contrast(1.5);
+}
+.line-sock.sock-anim {
+  animation: ring 1.5s ease;
+  transform-origin: 50% 4px;
+}
+.line-sock-1 {
+  top: 103px;
+  left: 25%;
+}
+.line-sock-2 {
+  top: 110px;
+  left: 34%;
+}
+.line-sock-3 {
+  top: 115px;
+  left: 43%;
+}
+.line-sock-4 {
+  top: 120px;
+  right: 43%;
+}
+.line-sock-5 {
+  top: 120px;
+  right: 34%;
+}
+.line-sock-6 {
+  top: 120px;
+  right: 25%;
+}
+.line-sock {
+  height: 120px;
+}
+.sform {
+  padding: 15px 15px 15px 30px;
+  border: 15px solid #fff;
+  background: #00947f;
+  position: absolute;
+  top: 20px;
+  right: 15%;
+  z-index: 500;
+  display: none;
+}
+.sform-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background: url("../img/close.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.sform-logo {
+  height: 40px;
+  margin-bottom: 15px;
+}
+.sform-logo img {
+  max-height: 100%;
+}
+.sform-inner {
+  display: flex;
+  align-items: center;
+}
+.sform-inner__logo {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 0px 25px 8px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 25px 8px rgba(255, 255, 255, 0.5);
+}
+.sform-inner__logo img {
+  max-width: 70%;
+}
+.sform-inner__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #fff;
+  max-width: 355px;
+  margin-left: 25px;
+}
+.sform-form {
+  display: flex;
+  align-items: center;
+  padding: 30px 0 15px;
+}
+.sform-form__input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  border: none;
+  height: 40px;
+  width: 300px;
+  background: #fff;
+  border-radius: 25px;
+  padding: 5px 25px;
+}
+.sform-form__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+.sform-form__btn {
+  height: 40px;
+  width: 80px;
+  background: url("../img/go-btn.png") no-repeat center;
+  background-size: contain;
+  border: none;
+}
+.sform-hint {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+  color: #fff;
+}
+
+.help {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  padding: 5px 10px;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+@keyframes garland {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes ring {
+  0% {
+    transform: rotate(25deg);
+  }
+  12.5% {
+    transform: rotate(-20deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  37.5% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  62.5% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (min-width: 1921px) {
+  .line {
+    top: auto;
+    bottom: 50%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .line {
+    top: 30%;
+  }
+
+  .santa:after {
+    left: -100px;
+    height: 280px;
+    width: 350px;
+  }
+  .santa-header {
+    font-size: 32px;
+    line-height: 35px;
+  }
+  .santa-text {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 400px;
+  }
+
+  .sform-logo {
+    height: 30px;
+  }
+  .sform-inner__logo {
+    height: 90px;
+    width: 90px;
+  }
+  .sform-inner__text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .sform-form__input {
+    font-size: 20px;
+    width: 200px;
+  }
+  .sform-hint {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .xtree {
+    left: -15%;
+  }
+}
+@media screen and (max-width: 980px) {
+  .xtree {
+    width: 421px;
+    height: 700px;
+    left: 5%;
+  }
+  .xtree:after {
+    left: 31px;
+    height: 550px;
+    width: 340px;
+  }
+
+  .line-sock {
+    height: 120px;
+  }
+  .line-sock-1 {
+    left: 20%;
+    top: 100px;
+  }
+  .line-sock-2 {
+    left: 30%;
+    top: 105px;
+  }
+  .line-sock-3 {
+    left: 40%;
+    top: 110px;
+  }
+  .line-sock-4 {
+    right: 40%;
+    top: 110px;
+  }
+  .line-sock-5 {
+    right: 30%;
+    top: 110px;
+  }
+  .line-sock-6 {
+    right: 20%;
+    top: 110px;
+  }
+}
+@media screen and (max-height: 760px) and (min-width: 800px) {
+  .line {
+    top: 18%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .inner-page {
+    background-position: 90% top;
+  }
+
+  .sform {
+    padding: 10px;
+  }
+  .sform-close {
+    top: 10px;
+    right: 10px;
+  }
+  .sform-logo {
+    height: 20px;
+  }
+  .sform-form__input {
+    width: 160px;
+    font-size: 16px;
+  }
+  .sform-form__input::placeholder {
+    font-size: 16px;
+  }
+  .sform-inner__logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+  }
+  .sform-inner__text {
+    width: calc(100% - 50px);
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .sform-hint {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .line-sock {
+    height: 100px;
+  }
+  .line-sock-1 {
+    left: 15%;
+  }
+  .line-sock-2 {
+    left: 25%;
+  }
+  .line-sock-3 {
+    left: 37%;
+    top: 105px;
+  }
+  .line-sock-4 {
+    right: 37%;
+    top: 110px;
+  }
+  .line-sock-5 {
+    right: 25%;
+    top: 110px;
+  }
+  .line-sock-6 {
+    right: 15%;
+    top: 110px;
+  }
+
+  .xtree {
+    left: -180px;
+  }
+  .santa {
+    padding-left: 20px;
+    max-width: 300px;
+    width: 100%;
+  }
+  .santa:after {
+    left: -260px;
+  }
+  .santa-header {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .santa-text {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 220px;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .inner-page {
+    background-position: 40% top;
+  }
+
+  .line-sock {
+    height: 70px;
+    width: 45px;
+  }
+  .line-sock-1 {
+    left: 15%;
+    top: 98px;
+  }
+  .line-sock-2 {
+    left: 25%;
+    top: 100px;
+  }
+  .line-sock-3 {
+    left: 37%;
+    top: 103px;
+  }
+  .line-sock-4 {
+    right: 37%;
+    top: 105px;
+  }
+  .line-sock-5 {
+    right: 25%;
+    top: 105px;
+  }
+  .line-sock-6 {
+    right: 15%;
+    top: 105px;
+  }
+
+  .sform {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+  .sform-form__input {
+    height: 30px;
+  }
+  .sform-form__btn {
+    height: 30px;
+  }
+
+  .santa {
+    right: 10px;
+  }
+  .santa.sactive {
+    bottom: 40px;
+  }
+  .santa-thanks {
+    bottom: 40px;
+  }
+  .santa:after {
+    left: -125px;
+    height: 145px;
+    width: 250px;
+    bottom: -20px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
