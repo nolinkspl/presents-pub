@@ -170,7 +170,8 @@ class MailingService
     private function sendEmail(array $params)
     {
         try {
-            $this->mailer->messages()->send(env('MAIL_DOMAIN'), $params);
+            $response = $this->mailer->messages()->send(env('MAIL_DOMAIN'), $params);
+            //var_dump($response);die;
         } catch (Exception $e) {
             $message = 'Test email sending failed';
             $this->logger->error(
