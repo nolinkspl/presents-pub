@@ -32,7 +32,7 @@
                   method="POST"
                   class="modal-form">
                 <label>
-                    <input type="email" class="modal-form__inp" placeholder="your@mail.ru">
+                    <input type="email" name="email" class="modal-form__inp" placeholder="your@mail.ru">
                 </label>
                 <input type="hidden"
                        name="gift_type_id"
@@ -63,7 +63,7 @@
                   method="POST"
                   class="modal-form">
                 <label>
-                    <input type="email" class="modal-form__inp" placeholder="your@mail.ru">
+                    <input type="email" name="email" class="modal-form__inp" placeholder="your@mail.ru">
                 </label>
                 <input type="hidden"
                        name="gift_type_id"
