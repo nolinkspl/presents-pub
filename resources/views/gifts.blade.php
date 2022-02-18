@@ -31,7 +31,9 @@
 			<form action="{{ route('receive-gift', ['code' => $invite->code]) }}"
                   method="POST"
                   class="modal-form">
-				<input type="mail" class="modal-form__inp" placeholder="your@mail.ru">
+                <label>
+                    <input type="email" class="modal-form__inp" placeholder="your@mail.ru">
+                </label>
                 <input type="hidden"
                        name="gift_type_id"
                        value="1"
@@ -60,7 +62,9 @@
 			<form action="{{ route('receive-gift', ['code' => $invite->code]) }}"
                   method="POST"
                   class="modal-form">
-				<input type="mail" class="modal-form__inp" placeholder="your@mail.ru">
+                <label>
+                    <input type="email" class="modal-form__inp" placeholder="your@mail.ru">
+                </label>
                 <input type="hidden"
                        name="gift_type_id"
                        value="2"
