@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Gift\DeleteAllGifts;
 use App\Http\Controllers\Admin\Gift\DownloadGiftImages;
 use App\Http\Controllers\Admin\Gift\DownloadGiftReport;
 use App\Http\Controllers\Admin\GiftController;
@@ -112,6 +113,10 @@ Route::middleware('auth')->group(function () {
 
         Route::get('gift/delete', GiftController::class . '@delete')
             ->name('admin-gift-delete')
+            ->middleware('role');
+
+        Route::get('gift/delete-all', DeleteAllGifts::class)
+            ->name('admin-gift-delete-all')
             ->middleware('role');
 
         Route::get('gift-stats', GiftController::class . '@stats')

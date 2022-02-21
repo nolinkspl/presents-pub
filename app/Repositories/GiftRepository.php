@@ -103,4 +103,9 @@ class GiftRepository
     {
         Gift::query()->where('id', $id)->delete();
     }
+
+    public function deleteAll(): void
+    {
+        Gift::query()->where('id', '>', 0)->delete();
+    }
 }

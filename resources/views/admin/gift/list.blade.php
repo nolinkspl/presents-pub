@@ -16,6 +16,9 @@
                 @if (Auth::user()->role === 'admin')
                 <a href="{{ route('admin-gift-form') }}" class="btn btn-primary">Добавить коды</a>
                 @endif
+                @if (Auth::user()->role === 'admin')
+                <a href="{{ route('admin-gift-delete-all') }}" class="btn btn-danger">Удалить все</a>
+                @endif
 
                 <a class="dropdown show">
                     <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
