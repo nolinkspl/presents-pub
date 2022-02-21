@@ -16,7 +16,7 @@ class ChooseGiftRequest extends Request
         ];
     }
 
-    public function getCode(): string
+    public function getCode(): ?string
     {
         $code = $this->get('code');
         if ($code === null) {

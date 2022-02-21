@@ -41,6 +41,9 @@ class ChooseGiftController extends Controller
         }
 
         $code = $request->getCode();
+        if (is_null($code)) {
+            return View::make('index')->with('error', 'Код не указан');
+        }
 
         try {
             $invite = $this->inviteRepository->findByCode($code);
