@@ -46,7 +46,7 @@ class MailingService
     {
         if ($gift->getType()->name === 'tree') {
             $this->sendEmailWithTree($email, $gift);
-        } elseif ($gift->getPic() === null) {
+        } elseif ($gift->getPicContent() === null) {
             $this->sendGiftCode($email, $gift);
         } else {
             $this->sendGiftPicture($email, $gift);
@@ -124,8 +124,8 @@ class MailingService
             ',
             'inline' => [
                 [
-                    'filename' => $gift->code . '.jpg',
-                    'fileContent' => $gift->getPic(),
+                    'filename' => $gift->getPicFilename(),
+                    'fileContent' => $gift->getPicContent(),
                     'cid' => 'image',
                 ],
             ],
@@ -171,7 +171,7 @@ class MailingService
     {
         try {
             $response = $this->mailer->messages()->send(env('MAIL_DOMAIN'), $params);
-            //var_dump($response);die;
+            var_dump($response);die;
         } catch (Exception $e) {
             $message = 'Test email sending failed';
             $this->logger->error(

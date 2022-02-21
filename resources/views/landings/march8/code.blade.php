@@ -52,7 +52,7 @@ $type = $gift->getType();
             <div class="contact__block">
                 <div class="contact__text">
                     <p>
-                        {!! $gift->getPic() === null ? $type->description_head : '' !!}
+                        {!! $gift->getPicContent() === null ? $type->description_head : '' !!}
                     </p>
                     <div class="form-group row">
                         <div class="bg-light border rounded gift_code"

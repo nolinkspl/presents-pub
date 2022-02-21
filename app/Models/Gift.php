@@ -74,26 +74,37 @@ class Gift extends Model
         return !empty($this->used_at);
     }
 
-    public function getPic(): ?string
+    public function getPicFilename(): ?string
     {
         $path = 'gifts/' . $this->code;
 
         $jpgPath = $path . '.jpg';
         if (Storage::exists($jpgPath)) {
-            return Storage::get($jpgPath);
+            return $jpgPath;
         }
+
         $pdfPath = $path . '.pdf';
 
         if (Storage::exists($pdfPath)){
-            return Storage::get($pdfPath);
+            return $pdfPath;
         }
 
         return null;
     }
 
+    public function getPicContent(): ?string
+    {
+        $filename = $this->getPicFilename();
+        if ($filename === null) {
+            return null;
+        }
+
+        return Storage::get($filename);
+    }
+
     public function getHtmlPic(): string
     {
-        $pic = $this->getPic();
+        $pic = $this->getPicContent();
         if ($pic === null) {
             return $this->code;
         }
