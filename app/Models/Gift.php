@@ -76,12 +76,19 @@ class Gift extends Model
 
     public function getPic(): ?string
     {
-        try {
-            $path = 'gifts/' . $this->code . '.jpg';
-            return Storage::get($path);
-        } catch (FileNotFoundException $e) {
-            return null;
+        $path = 'gifts/' . $this->code;
+
+        $jpgPath = $path . '.jpg';
+        if (Storage::exists($jpgPath)) {
+            return Storage::get($jpgPath);
         }
+        $pdfPath = $path . '.pdf';
+
+        if (Storage::exists($pdfPath)){
+            return Storage::get($pdfPath);
+        }
+
+        return null;
     }
 
     public function getHtmlPic(): string
