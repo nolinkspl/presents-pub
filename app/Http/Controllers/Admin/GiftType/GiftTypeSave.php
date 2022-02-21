@@ -6,11 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\GiftType\GiftTypeSaveRequest;
 use App\Models\GiftType;
 use App\Repositories\GiftTypeRepository;
+use Illuminate\Support\Facades\View;
 
 class GiftTypeSave extends Controller
 {
     /** @var GiftTypeRepository $giftTypeRepo */
     private $giftTypeRepo;
+
     public function __construct(GiftTypeRepository $giftTypeRepo)
     {
         $this->giftTypeRepo = $giftTypeRepo;
@@ -23,5 +25,8 @@ class GiftTypeSave extends Controller
             $giftType = new GiftType();
         }
         $this->giftTypeRepo->save($giftType, $request);
+
+        return View::make('admin.gift-type.list')
+            ->with('giftTypes', GiftType::orderBy('id')->paginate(20));
     }
 }

@@ -17,6 +17,7 @@ class GiftTypeSaveRequest extends Request
         return [
             'name' => 'string|required',
             'title' => 'string|required',
+            'description_head' => 'string',
             'description' => 'string|required',
             'cost' => 'int|required',
 
@@ -37,6 +38,11 @@ class GiftTypeSaveRequest extends Request
     public function getTitle(): string
     {
         return $this->get('title');
+    }
+
+    public function getDescriptionHead(): string
+    {
+        return $this->get('description_head');
     }
 
     public function getDescription(): string

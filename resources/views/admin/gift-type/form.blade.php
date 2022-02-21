@@ -34,6 +34,13 @@
                             </label>
                         </div>
                         <div class="form-group">
+                            <label>Описание (Верхнее)
+                                <textarea name="description_head"
+                                          class="form-control"
+                                          type="text">{{ $giftType->description_head }}</textarea>
+                            </label>
+                        </div>
+                        <div class="form-group">
                             <label>Описание (Инструкция для применения)
                                 <textarea name="description"
                                           class="form-control"

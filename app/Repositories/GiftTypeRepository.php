@@ -104,6 +104,7 @@ class GiftTypeRepository
     {
         $giftType->name = $request->getName();
         $giftType->title = $request->getTitle();
+        $giftType->description_head = $request->getDescriptionHead();
         $giftType->description = $request->getDescription();
         $giftType->cost = $request->getCost();
         $giftType->is_vip = $request->getVip();
