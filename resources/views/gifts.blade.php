@@ -58,7 +58,7 @@
             </div>
             <ul>
                 <li class="modal-trigget" data-modal="1"><img src="{{ asset('img/lamoda.png') }}" alt=""></li>
-                <li class="modal-trigget" data-modal="2"><img src="{{ asset('img/Mvideo.png') }}" alt=""></li>
+                <li class="modal-trigget" data-modal="2"><img src="{{ asset('img/mvideo.png') }}" alt=""></li>
                 <li class="modal-trigget" data-modal="3"><img src="{{ asset('img/Лэтуаль.png') }}" alt=""></li>
             </ul>
             <p>Выберите подарок.</p>
