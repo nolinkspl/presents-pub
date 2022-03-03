@@ -1,0 +1,122 @@
+
+@font-face
+    font-family: 'Circe'
+    src: url('../fonts/circe-light.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+body
+    margin: 0
+    padding: 0
+    font-family: 'Circe'
+    font-weight: 600
+
+p
+    font-size: 28px
+    line-height: 32px
+    color: #f0d38e
+
+.m-fon
+    display: none
+    width: 100%
+    
+#gift
+    width: 100%
+    height: 100%
+    min-height: 100vh
+    background: url(../../img/fon.jpg)
+    background-position: center
+    background-size: cover
+    display: flex
+    .gift_item
+        width: 50%
+        position: relative
+        .modal
+            display: none
+            position: absolute
+            text-align: center
+            background: url(../../img/fon-modal.jpg)
+            background-position: center
+            background-size: cover
+            border: 1px solid #fff
+            padding: 30px
+            top: 100px
+            z-index: 9999
+            img
+                max-height: 60px
+            input
+                background: #fff
+                border-radius: 50px
+                font-size: 26px
+                padding: 10px 20px
+                margin-right: 20px
+            button
+                padding: 0
+                background: transparent
+                border: 0
+                cursor: pointer
+                img 
+                    max-height: 55px
+            form
+                display: flex
+                align-items: center
+                justify-content: center
+            .close
+                position: absolute
+                right: 30px
+                max-width: 50px
+                cursor: pointer
+                img 
+                    width: 100%
+            &.active 
+                display: block
+                transition: all 0.3s
+        &.item_img
+            padding: 50px 20px 50px
+            img
+                width: 100%
+        &.item_form
+            text-align: center
+            display: flex
+            align-items: center
+            padding-top: 10%
+            h1
+                opacity: 0.9
+                font-size: 60px
+                line-height: 65px
+                text-transform: uppercase
+                margin-bottom: 0
+                font-weight: 500
+                color: #f0d38e
+            strong
+                font-size: 38px
+                color: #f0d38e
+                line-height: 40px
+                display: block
+                margin: 100px 0
+            .block
+                width: 100%
+                max-width: 800px
+                margin: 0 auto
+                position: relative
+            ul
+                list-style: none
+                display: flex
+                justify-content: center
+                padding: 0
+                margin: 0
+                border-bottom: 2px solid #f0d38e
+                padding-bottom: 30px
+                li
+                    max-width: 150px
+                    cursor: pointer
+                    &:not(:last-child)
+                        margin-right: 50px
+                    &:hover img
+                        transform: translateY(-10px)
+                        transition:  all 0.3s
+                    img
+                        width: 100%
+                        transition:  all 0.3s
+
+            
