@@ -1,42 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-	<title>Promo</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Время удовольствий</title>
+
+    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/media.css') }}">
 </head>
 <body>
+<main id="gift">
 
-	<main class="gift">
-		<a href="mail:help@ehrmann-feb23.ru" class="mail">help@ehrmann-feb23.ru</a>
-		<div class="gift-logo">
-			<img src="{{ asset('img/logo.png') }}" alt="">
-		</div>
-		<div class="gift-line1">
-			<img src="{{ asset('img/text1.png') }}" alt="">
-		</div>
-		<div class="gift-line2">
-			<img src="{{ asset('img/text2.png') }}" alt="">
-		</div>
-		<div class="gift-inner">
-			<div class="gift-inner__img">
-				<img class="gift-img1" src="{{ asset('img/main-img1.png') }}" alt="">
-			</div>
-			<div class="gift-inner__main">
-				<h1 class="gift-header">Сертификат и инструкция по его использованию отправлены на Ваш адрес электронной почты.<br>
-                <br>С праздником!</h1>
-			</div>
-			<div class="gift-inner__img">
-				<img class="gift-img2" src="{{ asset('img/main-img2.png') }}" alt="">
-			</div>
-		</div>
-	</main>
-
-	<script src="{{ asset('js/jquery.js') }}"></script>
-	<script src="{{ asset('js/main.js') }}"></script>
+    <div class="gift_item item_img">
+        <img src="{{ asset('img/product.png') }}" alt="">
+    </div>
+    <div class="gift_item item_form">
+        <div class="block">
+            <h1>С ЗАБОТОЙ И ЛЮБОВЬЮ</h1>
+            <strong>Сертификат и инструкция по его использованию <br> отправлены на Ваш адрес электронной почты.<br><br>С праздником!</strong>
+        </div>
+    </div>
+</main>
+<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+</body>
 </html>
