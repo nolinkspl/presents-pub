@@ -47,8 +47,10 @@ class CreateUserCommand extends Command
             $user->role = $this->option('role');
 
             $user->save();
+
+            $this->info("User successfully created");
         } catch (\Throwable $exception) {
-            $message = 'Admin user creation failed';
+            $message = 'User creation failed';
             $logger->error(
                 $message,
                 [
@@ -56,9 +58,7 @@ class CreateUserCommand extends Command
                     'trace'   => $exception->getTraceAsString()
                 ]
             );
-            $this->error($message);
+            $this->error($exception->getMessage());
         }
-
-        echo "Admin user successfully created";
     }
 }
