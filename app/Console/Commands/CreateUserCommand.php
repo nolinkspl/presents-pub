@@ -10,14 +10,14 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Psr\Log\LoggerInterface;
 
-class CreateAdminUserCommand extends Command
+class CreateUserCommand extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'user:create_admin_user {--email=} {--password=} {--name=}';
+    protected $signature = 'user:create_user {--email=} {--password=} {--name=} {--role=}';
 
     /**
      * The console command description.
@@ -44,7 +44,7 @@ class CreateAdminUserCommand extends Command
                 'password' => Hash::make($this->option('password')),
                 'remember_token' => Str::random(60),
             ]);
-            $user->role = 'admin';
+            $user->role = $this->option('role');
 
             $user->save();
         } catch (\Throwable $exception) {

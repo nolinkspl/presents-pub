@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         'App\Console\Commands\CreateAdminUserCommand',
+        'App\Console\Commands\CreateUserCommand',
         'App\Console\Commands\SendTestEmailCommand',
     ];
 
