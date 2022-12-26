@@ -48,12 +48,12 @@ class ChooseGiftController extends Controller
         try {
             $invite = $this->inviteRepository->findByCode($code);
             if ($invite === null) {
-                throw new NotFoundHttpException('Invite not found');
+                throw new NotFoundHttpException('Приглашение не найдено');
             }
 
             if ($invite->isUsed()) {
                 //return redirect()->route('receive-gift-index', ['code' => $invite->code]);
-                throw new NotFoundHttpException('Invite already used');
+                throw new NotFoundHttpException('Приглашение уже использовано');
             }
 
             $unusedGifts = $this->giftRepository->findAllUnused();
@@ -61,15 +61,20 @@ class ChooseGiftController extends Controller
             $this->logger->error($e->getMessage(), $e->getTrace());
             return View::make('index')->with('error', $e->getMessage());
         }
-
+        $giftTypes = $this->giftTypeRepository->getGiftTypesList();
+        $giftTypesByName = [];
+        foreach ($giftTypes as $giftType) {
+            $giftTypesByName[$giftType->name] = $giftType;
+    }
         $giftCountsByTypes = $this->giftTypeRepository->countGiftsByTypes(
-            $this->giftTypeRepository->getGiftTypesList(),
+            $giftTypes,
             $unusedGifts
         );
 
         //return View::make($invite->is_vip ? 'gifts-vip' : 'gifts')
         return View::make('gifts')
              ->with('invite', $invite)
-             ->with('giftCountsByTypes', $giftCountsByTypes);
+             ->with('giftCountsByTypes', $giftCountsByTypes)
+             ->with('giftTypesByName', $giftTypesByName);
     }
 }

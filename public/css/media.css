@@ -1,0 +1,495 @@
+@media only screen and (min-width : 1201px) and (max-width : 1440px) {
+  * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        background-position: 47% 70%;
+    }
+
+    .epica{
+        width: 23%;
+        /* padding-top: 15%; */
+        padding-left: 7%;
+        margin-top: -2%;
+        cursor: pointer;
+    }
+
+    .topstrech{
+        width: 100px;
+        height: 100px;
+        animation: pai 5s forwards;
+        cursor: pointer;
+        margin-top: -9%;
+    }
+
+    .epica2{
+        width: 24%;
+        /* margin-top: 21%; */
+        padding-top: 25%;
+        padding-left: 2%;
+        cursor: pointer;
+    }
+
+    .lamoda{
+        padding-top: 6%;
+    }
+
+    .letoile{
+        padding-top: 11px;
+    }
+
+    
+}
+
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 993px) and (max-width : 1200px) {
+  * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        background-position: 47% 70%;
+    }
+
+    .container{
+        padding: 0 100px 0 100px;
+    }
+
+    .epica2{
+        width: 24%;
+        /* margin-top: 21%; */
+        padding-top: 19%;
+        padding-left: 4%;
+        cursor: pointer;
+    }
+
+    .letoile{
+        width: 80px;
+        height: 80px;
+        padding-top: 6%;
+        animation: pai 5s forwards;
+        cursor: pointer;
+    }
+
+    .mama_lama{
+        width: 23%;
+        /* margin-top: 11px; */
+        /* padding-top: 30%; */
+        padding-left: 10%;
+        padding-top: 3%;
+        cursor: pointer;
+    }
+
+    .sportmaster{
+        width: 80px;
+        height: 80px;
+    }
+
+    .grand{
+        padding-top: 16%;
+    }
+
+    .lamoda{
+        width: 80px;
+        height: 80px;
+        padding-top: 3%;
+        animation: pai 5s forwards;
+        cursor: pointer;
+    }
+
+    .topstrech{
+        width: 80px;
+        height: 80px;
+    }
+
+    .epica{
+        width: 23%;
+        /* padding-top: 15%; */
+        padding-left: 7%;
+        margin-top: -3%;
+        cursor: pointer;
+    }
+
+    .topstrech{
+        width: 80px;
+        height: 80px;
+        animation: pai 5s forwards;
+        cursor: pointer;
+        margin-top: -8%;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 768px) and (max-width : 992px) {
+
+    * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        background-position: 47% 70%;
+    }
+
+    .container{
+        padding: 0 100px 0 100px;
+    }
+
+    .conveer_img{
+        margin-top: 20%;
+    }
+
+    .mama_lama{
+        width: 35%;
+        padding-top: 6%;
+    }
+
+    .grand{
+        width: 30%;
+        /* margin-top: 21%; */
+        padding-top: 32%;
+        padding-left: 2%;
+        cursor: pointer;
+    }
+
+    .lamoda{
+        width: 100px;
+        height: 100px;
+        padding-top: 18%;
+        animation: pai 5s forwards;
+        cursor: point
+    }
+
+    .epica{
+        width: 30%;
+    }
+
+    .epica2{
+        width: 30%;
+        /* margin-top: 21%; */
+        padding-top: 35%;
+        padding-left: 2%;
+        cursor: pointer;
+    }
+
+    .letoile{
+        width: 100px;
+        height: 100px;
+        padding-top: 22%;
+        animation: pai 5s forwards;
+        cursor: pointer;
+    }
+
+    .le_toile{
+        padding-left: 14px;
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 481px) and (max-width : 768px) {
+
+    * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        background-position: 47% 70%;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .congratulation{
+        margin-top: 5%;
+    }
+
+    .mama_lama{
+        width: 60%;
+        padding-top: 72%;
+    }
+
+    .grand{
+        width: 55%;
+        padding-top: 90%;
+    }
+
+    .epica{
+        width: 60%;
+        margin-top: 33%;
+    }
+
+    .epica2{
+        width: 55%;
+        padding-top: 103%;
+    }
+
+    .sportmaster{
+        width: 120px;
+        height: auto;
+        margin-top: 91%;
+    }
+
+    .lamoda{
+        width: 120px;
+        height: auto;
+        margin-top: 126%;
+    }
+
+    .topstrech{
+        width: 120px;
+        height: auto;
+        margin-top: 46%;
+    }
+
+    .letoile{
+        width: 120px;
+        height: auto;
+        margin-top: 152%;
+    }
+
+    .logo{
+        left: 41%;
+    }
+
+    .main_form{
+        width: 620px;
+        height: auto;
+        background: #8b9e1f;
+        border: 10px solid white;
+        padding: 10px 20px;
+    }
+
+    .sport_master_text{
+        font-size: 40px;
+    }
+
+    .close{
+        width: 8%;
+        height: auto;
+    }
+
+    .img_text p{
+        font-size: 24px;
+    }
+
+    .image_choise_3{
+        width: 97px;
+    }
+
+    .image_choise_4{
+        width: 96px;
+    }
+
+    .send{
+        height: 12%;
+    }
+
+    .main_product{
+        position: absolute;
+        top: 21%;
+        z-index: 1;
+    }
+
+    .conveer_img img{
+        display: none;
+    }
+
+    .conveer_img_mobile{
+        display: block;
+        margin-top: 50%;
+    }
+
+    .conveer_img_mobile img{
+        width: 100%;
+    }
+
+    .sportmaster_block{
+        width: 120px;
+        height: 120px;
+    }
+
+    .lamoda_block{
+        width: 120px;
+        height: 120px;
+    }
+
+    .topstrech_block{
+        width: 120px;
+        height: 120px;
+    }
+
+    .letoile_block{
+        width: 120px;
+        height: 120px;
+    }
+
+
+
+  
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+    * {
+    padding: 0;
+    margin: 0;
+    }
+
+    body{
+        background-position: 47% 70%;
+    }
+
+    .container{
+        padding: 0;
+    }
+
+    .conveer_img img{
+        display: none;
+    }
+
+    .conveer_img_mobile img{
+        width: 100%;
+    }
+
+    .conveer_img_mobile{
+        display: block;
+        margin-top: 60%;
+    }
+
+    .congratulation p{
+        font-size: 55px;
+    }
+
+    .mama_lama{
+        width: 60%;
+        padding-top: 108%;
+    }
+
+    .grand{
+        width: 65%;
+        padding-top: 113%;
+    }
+
+    .epica{
+        width: 60%;
+        margin-top: 71%;
+    }
+
+    .epica2{
+        width: 65%;
+        padding-top: 123%;
+    }
+
+    .sportmaster{
+        width: 80px;
+        height: auto;
+        margin-top: 116%;
+    }
+
+    .lamoda{
+        width: 80px;
+        height: auto;
+        margin-top: 128%;
+    }
+
+    .topstrech{
+        width: 80px;
+        height: auto;
+        margin-top: 85%;
+    }
+
+    .letoile{
+        width: 80px;
+        height: auto;
+        margin-top: 107%;
+    }
+
+    .logo{
+        left: 39%;
+    }
+
+    .main_form{
+        width: 83%;
+        height: auto;
+        background: #8b9e1f;
+        border: 10px solid white;
+        padding: 10px 20px;
+    }
+
+    .sport_master_text{
+        font-size: 39px;
+    }
+
+    .close{
+        width: 10%;
+        height: auto;
+    }
+
+    .img_text p{
+        font-size: 24px;
+    }
+
+    .image_choise_3{
+        width: 178px;
+    }
+
+    .image_choise_4{
+        width: 178px;
+    }
+
+    .send{
+        height: 12%;
+    }
+
+    .mail_send{
+        border-radius: 20px;
+        width: 20%;
+    }
+
+    .le_toile {
+        width: 74px;
+        padding-left: 8px;
+    }
+
+    .sportmaster_block{
+        width: 80px;
+        height: 80px;
+    }
+
+    .lamoda_block{
+        width: 80px;
+        height: 80px;
+    }
+
+    .topstrech_block{
+        width: 80px;
+        height: 80px;
+    }
+
+    .letoile_block{
+        width: 80px;
+        height: 80px;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+}
