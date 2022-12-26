@@ -23,7 +23,7 @@
     <span class="snowflake"></span>
 </div>
 <div class="logo_img">
-    <img class="logo" src="img/logo.png">
+    <img class="logo" src="{{ asset('img/logo.png') }}">
 </div>
 <div class="product">
     <div class="container">
@@ -37,37 +37,37 @@
             <ul class="img_prod">
                 <li>
                     <div class="sportmaster_block">
-                        <img class="sportmaster" src="img/sportmaster.png">
+                        <img class="sportmaster" src="{{ asset('img/sportmaster.png') }}">
                     </div>
-                    <img class="mama_lama" src="img/mama_lama1.png" alt="">
+                    <img class="mama_lama" src="{{ asset('img/mama_lama1.png') }}" alt="">
                 </li>
                 <li>
                     <div class="lamoda_block">
-                        <img class="lamoda" src="img/lamoda.png">
+                        <img class="lamoda" src="{{ asset('img/lamoda.png') }}">
                     </div>
-                    <img class="grand" src="img/grand1.png" alt="">
+                    <img class="grand" src="{{ asset('img/grand1.png') }}" alt="">
                 </li>
                 <li>
                     <div class="topstrech_block">
-                        <img class="topstrech" src="img/topstrech.png">
+                        <img class="topstrech" src="{{ asset('img/topstrech.png') }}">
                     </div>
-                    <img class="epica" src="img/epica1.png" alt="">
+                    <img class="epica" src="{{ asset('img/epica1.png') }}" alt="">
                 </li>
                 <li>
                     <div class="letoile_block">
-                        <img class="letoile" src="img/letoile.png">
+                        <img class="letoile" src="{{ asset('img/letoile.png') }}">
                     </div>
-                    <img class="epica2" src="img/epica22.png" alt="">
+                    <img class="epica2" src="{{ asset('img/epica22.png') }}" alt="">
                 </li>
             </ul>
         </div>
     </div>
 </div>
 <div class="conveer_img">
-    <img src="img/conveer.png">
+    <img src="{{ asset('img/conveer.png') }}">
 </div>
 <div class="conveer_img_mobile">
-    <img src="img/polosa.png">
+    <img src="{{ asset('img/polosa.png') }}">
 </div>
 <div class="congratulation">
     <p>С новым 2023 <br>годом!</p>
@@ -125,7 +125,10 @@
 
 
 
-    <form id="auth_2" action="" method="post">
+    <form id="auth_2"
+          action="{{route('receive-gift', $invite->getCode())}}"
+          method="POST"
+          class="form js-gift-choosing-form">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
             <div class="txt_close">
@@ -173,12 +176,15 @@
 
 
 
-    <form id="auth_3" action="" method="post">
+    <form id="auth_3"
+          action="{{route('receive-gift', $invite->getCode())}}"
+          method="POST"
+          class="form js-gift-choosing-form">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
             <div class="txt_close">
                 <p class="sport_master_text">TOPSTRETCHING</p>
-                <img class="close" src="img/close.png">
+                <img class="close" src="{{ asset('img/close.png') }}">
             </div>
             <div class="block_form">
                 <div class="img_text">
@@ -220,7 +226,10 @@
 
 
 
-    <form id="auth_4" action="" method="post">
+    <form id="auth_4"
+          action="{{route('receive-gift', $invite->getCode())}}"
+          method="POST"
+          class="form js-gift-choosing-form">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
             <div class="txt_close">
