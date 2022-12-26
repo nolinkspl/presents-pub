@@ -73,7 +73,7 @@
     <p>С новым 2023 <br>годом!</p>
 </div>
 
-@if ($giftCountsByTypes['sport'] > 0)
+
     <form id="auth"
           action="{{route('receive-gift', $invite->getCode())}}"
           method="POST"
@@ -92,6 +92,7 @@
                     </div>
                     <p class="sport_txt">Ваши личные рекорды с подарками  от Спортмастер</p>
                 </div>
+                @if ($giftCountsByTypes['sport'] > 0)
                 <div class="send">
                     <input required type="email" class="txt" name="email" placeholder="Укажите e-mail"></p>
                     <!-- <input class="mail_send" type="submit" form="auth" value=">>"> -->
@@ -114,15 +115,16 @@
                     <p align="right">Выберите подарок, введите почту, на которую <br>Вам будет отправлен код активации.
                     </p>
                 </div>
+                @else
+                    @include('layouts.out-of-gifts')
+                @endif
             </div>
         </div>
     </form>
-@else
-    @include('layouts.out-of-gifts')
-@endif
 
 
-@if ($giftCountsByTypes['lamoda'] > 0)
+
+
     <form id="auth_2" action="" method="post">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
@@ -138,6 +140,7 @@
                     </div>
                     <p class="lamoda_txt">Найдите себе новый образ – порадуйте себя с Lamoda в новом году</p>
                 </div>
+                @if ($giftCountsByTypes['lamoda'] > 0)
                 <div class="send">
                     <input required type="email" type="text" class="txt" name="email" placeholder="Укажите e-mail"></p>
                     <!-- <input class="mail_send" type="submit" form="auth" value=">>"> -->
@@ -160,15 +163,16 @@
                     <p align="right">Выберите подарок, введите почту, на которую <br>Вам будет отправлен код активации.
                     </p>
                 </div>
+                @else
+                    @include('layouts.out-of-gifts')
+                @endif
             </div>
         </div>
     </form>
-@else
-    @include('layouts.out-of-gifts')
-@endif
 
 
-@if ($giftCountsByTypes['top-strech'] > 0)
+
+
     <form id="auth_3" action="" method="post">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
@@ -184,6 +188,7 @@
                     </div>
                     <p class="top-strech_txt">Все форматы авторских он-лайн курсов от топ тренеров</p>
                 </div>
+                @if ($giftCountsByTypes['top-strech'] > 0)
                 <div class="send">
                     <input required type="email" type="text" class="txt" name="email" placeholder="Укажите e-mail"></p>
                     <!-- <input class="mail_send" type="submit" form="auth" value=">>"> -->
@@ -206,14 +211,15 @@
                     <p align="right">Выберите подарок, введите почту, на которую <br>Вам будет отправлен код активации.
                     </p>
                 </div>
+                @else
+                    @include('layouts.out-of-gifts')
+                @endif
             </div>
         </div>
     </form>
-@else
-    @include('layouts.out-of-gifts')
-@endif
 
-@if ($giftCountsByTypes['l-etoile'] > 0)
+
+
     <form id="auth_4" action="" method="post">
         <img class="snow" src="{{ asset('img/snow.png') }}">
         <div class="main_form">
@@ -229,6 +235,7 @@
                     </div>
                     <p class="le_toile_txt">Стань еще привлекательнее с подарками от Л'Этуаль</p>
                 </div>
+                @if ($giftCountsByTypes['l-etoile'] > 0)
                 <div class="send">
                     <input required type="email" class="txt" name="email" placeholder="Укажите e-mail"></p>
                     <!-- <input class="mail_send" type="submit" form="auth" value=">>"> -->
@@ -251,15 +258,18 @@
                     <p align="right">Выберите подарок, введите почту, на которую <br>Вам будет отправлен код активации.
                     </p>
                 </div>
+                @else
+                    @include('layouts.out-of-gifts')
+                @endif
+
             </div>
         </div>
     </form>
-@else
-    @include('layouts.out-of-gifts')
-@endif
 
 <script src="{{ asset('assets/js/jquery-3.6.2.js') }}"></script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/notify.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </body>
 </html>

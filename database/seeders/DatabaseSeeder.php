@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
         $data = [
             [
                 'id' => 1,
-                'name' => 'sportmaster',
+                'name' => 'sport',
                 'title' => 'Спортмастер',
                 'is_vip' => false,
                 'description_head' => 'Распечатайте и сохраните номер и PIN код сертификата. <br>',
@@ -298,7 +298,7 @@ class DatabaseSeeder extends Seeder
         $data = [];
 
          for ($i = 0; $i < 200; $i++) {
-             $typeId = ($i % 4) + 1;
+             $typeId = ($i % 3) + 1;
              if ($typeId == 9) continue;
              if (in_array($typeId, [5, 10])) {
                  continue;
