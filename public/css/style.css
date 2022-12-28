@@ -19,7 +19,7 @@
 }
 
 body{
-    background: url('../img/background.png');
+    background: url('../img/background2.png');
     background-position: center center;    
 
   background-repeat: no-repeat;    
@@ -405,3 +405,26 @@ form{
     width: 10px;
     height: 10px;
   }
+
+
+.form_hide{
+    display: none;
+}
+
+
+.new_year_congratulation{
+    text-align: center;
+    font-size: 52px;
+    margin-top: 9%;
+    font-family: markella;
+    color: white;   
+}
+
+.form_conf{
+    margin-top: 3%;
+    right: 2%;
+}
+
+.form_conf .main_form{
+    height: 100%;
+}

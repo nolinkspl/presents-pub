@@ -1,28 +1,32 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Время удовольствий</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ asset('assets/css/style.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/media.css') }}">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/media.css') }}">
+
 </head>
 <body>
-<main id="gift">
+<div id="snowflakeContainer">
+    <span class="snowflake"></span>
+</div>
+<div class="logo_img">
+    <img class="logo" src="{{ asset('img/logo.png') }}">
+</div>
 
-    <div class="gift_item item_img">
-        <img src="{{ asset('img/product.png') }}" alt="">
-    </div>
-    <div class="gift_item item_form">
-        <div class="block">
-            <h1>С ЗАБОТОЙ И ЛЮБОВЬЮ</h1>
-            <strong>Сертификат и инструкция по его использованию <br> отправлены на Ваш адрес электронной почты.<br><br>С праздником!</strong>
+<form class="form_conf" action="" method="post">
+    <img class="snow" src="{{ asset('img/snow.png') }}">
+    <div class="main_form">
+        <div class="new_year_congratulation">
+            <p>Сертификат и инструкция по его использованию</p>
+            <p>отправлены на Ваш адрес электронной почты.</p>
+            <p>С праздником!</p>
         </div>
     </div>
-</main>
-<script src="{{ asset('assets/js/jquery-3.6.0.min.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
+</form>
 </body>
 </html>

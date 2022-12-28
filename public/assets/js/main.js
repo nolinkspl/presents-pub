@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    $('form').fadeOut();
+    $('form').fadeOut('');
     $('.sportmaster, .mama_lama').click(function(){
+        $('.form_hide').fadeIn('slow');
         $('.sportmaster').fadeIn('slow');
         $('#auth').fadeIn('slow');
         $('.congratulation p').fadeOut('slow');
@@ -11,6 +12,7 @@ $(document).ready(function () {
 
     $('.grand, .lamoda').click(function(){
         $('#auth').fadeOut('slow');
+        $('.form_hide').fadeIn('slow');
         $('.congratulation p').fadeOut('slow');
         $('#auth_2').fadeIn('slow');
         $('#auth_3').fadeOut('slow');
@@ -19,6 +21,7 @@ $(document).ready(function () {
 
     $('.topstrech, .epica').click(function(){
         $('#auth').fadeOut('slow');
+        $('.form_hide').fadeIn('slow');
         $('.congratulation p').fadeOut('slow');
         $('#auth_2').fadeOut('slow');
         $('#auth_3').fadeIn('slow');
@@ -28,6 +31,7 @@ $(document).ready(function () {
 
     $('.epica2, .letoile_block').click(function(){
         $('#auth').fadeOut('slow');
+        $('.form_hide').fadeIn('slow');
         $('.congratulation p').fadeOut('slow');
         $('#auth_2').fadeOut('slow');
         $('#auth_3').fadeOut('slow');
