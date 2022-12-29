@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\GiftType\GiftTypeList;
 use App\Http\Controllers\Admin\GiftType\GiftTypeSave;
 use App\Http\Controllers\Admin\Invite\DownloadInviteReport;
 use App\Http\Controllers\Admin\InviteController;
+use App\Http\Controllers\Admin\Users;
 use App\Http\Controllers\LandingStubController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -124,6 +125,21 @@ Route::middleware('auth')->group(function () {
 
         Route::get('download-gifts-excel', DownloadGiftReport::class)
             ->name('download-gifts-excel');
+
+        Route::get('users', Users\GetList::class)
+            ->name('users');
+
+        Route::get('users/create', Users\Create::class)
+            ->name('users.create');
+
+        Route::post('users/create', Users\CreatePost::class)
+            ->name('users.create');
+
+        Route::get('users/edit', Users\Edit::class)
+            ->name('users.edit');
+
+        Route::post('users/edit', Users\EditPost::class)
+            ->name('users.edit');
     });
 });
 
