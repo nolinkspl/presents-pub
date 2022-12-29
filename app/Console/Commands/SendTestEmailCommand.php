@@ -32,9 +32,9 @@ class SendTestEmailCommand extends Command
         try {
            // $mailingService->sendEmailTemplateToList('test22', 'info@newyear-ehrmann.ru', 'Новогодний подарок от Эрманн, напоминание');
 
-            $mailingService->sendGiftPicture(
+            $mailingService->sendGiftCode(
                 'arsnag03@gmail.com',
-                $giftRepository->findByInviteId(135)
+                $giftRepository->findByInviteId(1)
             );
 
             echo "Successful test email sending";

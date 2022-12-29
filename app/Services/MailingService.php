@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Gift;
+use App\Models\MailgunMail;
 use Exception;
 use Mailgun\Mailgun;
 use Illuminate\Support\Facades\Mail;
@@ -53,7 +54,7 @@ class MailingService
         }
     }
 
-    public function sendGiftCode(string $email, Gift $gift): void
+    public function sendGiftCode(string $email, Gift $gift)
     {
         $params = [
             'from'    => env('MAIL_FROM_ADDRESS'),
@@ -88,10 +89,10 @@ class MailingService
             ',
         ];
 
-        $this->sendEmail($params);
+        $this->sendEmail($params, $gift->invite_id);
     }
 
-    public function sendGiftPicture(string $email, Gift $gift): void
+    public function sendGiftPicture(string $email, Gift $gift)
     {
         $params = [
             'from'    => env('MAIL_FROM_ADDRESS'),
@@ -131,7 +132,7 @@ class MailingService
             ],
         ];
 
-        $this->sendEmail($params);
+        $this->sendEmail($params, $gift->invite_id);
     }
 
     public function sendEmailWithTree(string $email, Gift $gift)
@@ -164,13 +165,18 @@ class MailingService
             ',
         ];
 
-        $this->sendEmail($params);
+        $this->sendEmail($params, $gift->invite_id);
     }
 
-    private function sendEmail(array $params)
-    {
+    private function sendEmail(array $params, int $inviteId) {
         try {
             $response = $this->mailer->messages()->send(env('MAIL_DOMAIN'), $params);
+
+            $mail = new MailgunMail();
+            $mail->invite_id = $inviteId;
+            $mail->mail_uid = $response->getId();
+            $mail->message = $response->getMessage();
+            $mail->save();
         } catch (Exception $e) {
             $message = 'Test email sending failed';
             $this->logger->error(
