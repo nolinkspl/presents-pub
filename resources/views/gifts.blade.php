@@ -19,9 +19,6 @@
 
 </head>
 <body>
-<div id="snowflakeContainer">
-    <span class="snowflake"></span>
-</div>
 <div class="logo_img">
     <img class="logo" src="{{ asset('img/logo.png') }}">
 </div>
@@ -70,7 +67,7 @@
     <img src="{{ asset('img/polosa.png') }}">
 </div>
 <div class="congratulation">
-    <p>С новым 2023 <br>годом!</p>
+    <p>Время <br>удовольствий</p>
 </div>
 
 

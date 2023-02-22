@@ -11,9 +11,6 @@
 
 </head>
 <body>
-<div id="snowflakeContainer">
-    <span class="snowflake"></span>
-</div>
 <div class="logo_img">
     <img class="logo" src="{{ asset('img/logo.png') }}">
 </div>
