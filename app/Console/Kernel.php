@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel
         'App\Console\Commands\CreateAdminUserCommand',
         'App\Console\Commands\CreateUserCommand',
         'App\Console\Commands\SendTestEmailCommand',
+        'App\Console\Commands\LoadEmailEventsCommand'
     ];
 
     /**
