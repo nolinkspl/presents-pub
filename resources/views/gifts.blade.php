@@ -138,7 +138,7 @@
                         <a href="https://www.lamoda.ru/" target="blank"><img class="lamoda_img"
                                                                              src="{{ asset('img/logo-lamoda.png') }}"></a>
                     </div>
-                    <p class="lamoda_txt">Найдите себе новый образ – порадуйте себя с Lamoda в новом году</p>
+                    <p class="lamoda_txt">Подарки, которые точно понравятся</p>
                 </div>
                 @if ($giftCountsByTypes['lamoda'] > 0)
                 <div class="send">
