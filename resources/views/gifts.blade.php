@@ -20,13 +20,13 @@
 </head>
 <body>
 <div class="test">
-    <img src="img/flashlight.png" alt="">
+    <img src="{{ asset('img/flashlight.png') }}" alt="">
 </div>
 <div class="test2">
-    <img src="img/flashlight.png" alt="">
+    <img src="{{ asset('img/flashlight.png') }}" alt="">
 </div>
 <div class="test3">
-    <img src="img/flashlight.png" alt="">
+    <img src="{{ asset('img/flashlight.png') }}" alt="">
 </div>
 <div class="logo_img">
     <img class="logo" src="{{ asset('img/logo.png') }}">
