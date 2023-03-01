@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
        // $this->createGiftCategoryTypes();
         $this->createGifts();
         $this->createInvites();
+        $this->createLastUpdates();
     }
 
     public function createGiftTypes(): void
@@ -380,6 +381,16 @@ class DatabaseSeeder extends Seeder
         ];
 
         $this->createRecords(Models\User::class, $data);
+    }
+
+    private function createLastUpdates() {
+        $data = [
+            [
+                'name' => 'mailgun_events',
+                'last_updated_at' => now(),
+            ],
+        ];
+        $this->createRecords(Models\LastUpdates::class, $data);
     }
 //
 //    private function createGiftCategories(): void

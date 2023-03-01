@@ -19,14 +19,14 @@
 }
 
 body{
-    background: url('../img/background2.png');
+    background: url('../img/background3.png');
     background-position: center center;    
 
-  background-repeat: no-repeat;    
+  background-repeat: no-repeat;
 
-  background-attachment: fixed;    
+  background-attachment: fixed;
 
-  background-size: cover;   
+  background-size: cover;
 /*    background-position: 25% 70%;*/
 }
 
@@ -428,3 +428,67 @@ form{
 .form_conf .main_form{
     height: 100%;
 }
+
+.test img{
+    position: absolute;
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 100vh;
+    z-index: -1;
+}
+
+@keyframes slidein {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.test2 img{
+    position: absolute;
+    animation-duration: 1.8s;
+    animation-name: slidein2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 100vh;
+    right: 1px;
+    z-index: -1;
+}
+
+@keyframes slidein2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.test3 img{
+    position: absolute;
+    animation-duration: 2s;
+    animation-name: slidein3;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    width: 100vh;
+    right: 1px;
+    z-index: -1;
+}
+
+@keyframes slidein3 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+

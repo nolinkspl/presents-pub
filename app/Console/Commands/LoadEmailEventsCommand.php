@@ -34,10 +34,11 @@ class LoadEmailEventsCommand extends Command
             $mailgun = Mailgun::create('key-06d6c8c392fea54d130f96f0702e2823', getenv('MAILGUN_API_URL'));
             // $unconfirmedMails = MailgunMail::query()->where()
             $queryString = array(
-//                'ascending'    => 'yes',
-//                'pretty'       => 'yes',
-                'message-id' => '20221228182131.9b26d55fe4dbe576@ehrmann-podarok.ru',
-//                'to'    => 'arsnag03@gmail.com'
+            //    'ascending'    => 'yes',
+               'pretty'       => 'yes',
+            //    'id' => 'yX7vunbKRZmBT0iMy3hxfw',
+                // 'message-id' => '20230301054615.766fc2d09f95f8db@ehrmann-podarok.ru',
+               'to'    => 'arsnag03@gmail.com'
             );
 
             $response = $mailgun->events()->get(getenv('MAIL_DOMAIN'), $queryString);

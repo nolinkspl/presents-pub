@@ -40,6 +40,20 @@
         padding-top: 11px;
     }
 
+    .test img{
+        width: 100%;
+    }
+
+    .test2 img{
+        width: 100%;
+        top: 22%;
+    }
+
+    .test3 img{
+        width: 100%;
+        top: 52%;
+    }
+
     
 }
 
@@ -122,6 +136,20 @@
         cursor: pointer;
         margin-top: -8%;
     }
+
+    .test img{
+        width: 100%;
+    }
+
+    .test2 img{
+        width: 100%;
+        top: 22%;
+    }
+
+    .test3 img{
+        width: 100%;
+        top: 52%;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -187,6 +215,20 @@
 
     .le_toile{
         padding-left: 14px;
+    }
+
+    .test img{
+        width: 100%;
+    }
+
+    .test2 img{
+        width: 100%;
+        top: 22%;
+    }
+
+    .test3 img{
+        width: 100%;
+        top: 52%;
     }
 
 }
@@ -329,6 +371,20 @@
     .letoile_block{
         width: 120px;
         height: 120px;
+    }
+
+    .test img{
+        width: 100%;
+    }
+
+    .test2 img{
+        width: 100%;
+        top: 22%;
+    }
+
+    .test3 img{
+        width: 100%;
+        top: 52%;
     }
 
 
@@ -478,6 +534,20 @@
     .letoile_block{
         width: 80px;
         height: 80px;
+    }
+
+    .test img{
+        width: 100%;
+    }
+
+    .test2 img{
+        width: 100%;
+        top: 22%;
+    }
+
+    .test3 img{
+        width: 100%;
+        top: 52%;
     }
 
     
